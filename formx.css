@@ -1,0 +1,61 @@
+.formDiv{
+	margin: 70px;
+	margin-right: 40%;
+	margin-top: 75px;
+	
+	height: auto;
+	background-color: black;
+	opacity: .7;
+	
+}
+
+.form{
+	padding-top: 20px;
+	margin: 40px;
+	padding-bottom: 20px;
+}
+.form h2{
+    border-bottom: 1px solid #fff;
+	text-align: center;
+	color: red;
+	font-family: Andalus;
+}
+.form p{
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 20px;
+	color: red;
+	font-family: Andalus;
+}
+.form input{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	color: white;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.form input[type="submit"],input[type="reset"]{
+	
+	margin-left:  25%;
+	width: 50%;
+	border-bottom: none;
+	background: red;
+	height: 40px;
+	font-size: 20px;
+	border-radius: 20px;
+
+}
+
+ 
+
+.form select{
+	margin-left: 5px;
+	margin-right: 10px;
+}
+.form select option{
+	font-size: 15px;
+	color: black;
+}
+

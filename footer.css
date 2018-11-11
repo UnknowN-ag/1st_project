@@ -1,0 +1,41 @@
+.foot{
+	margin-top: 30px;
+	border-top: 2px solid red;
+	background: black;
+	opacity: 0.8;
+
+}
+.foot ul{
+	padding: 5px;
+	list-style: none;
+	text-decoration: none;
+}
+.foot p{
+	padding: 10px;
+	color: white ;
+}
+
+.foot ul li{
+	text-decoration: none;
+	padding-right: 20px;
+	display: inline;
+	color: white;
+}
+.foot p a{text-decoration: none; color: white;}
+.foot p a:hover{color: DodgerBlue; text-decoration: underline;}
+
+.foot #facebook:hover{
+	color: blue;
+}
+.foot #twitter:hover{
+	color: #1da1f2;
+}
+.foot #insta:hover{
+	color: #262626;
+}
+.foot #google-plus:hover{
+	color: #db4437;
+}
+.foot #email:hover{
+	color: red;
+}

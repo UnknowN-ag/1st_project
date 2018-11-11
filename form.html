@@ -1,0 +1,249 @@
+<html>
+<head>
+  <title>X Form</title>
+  <link rel="stylesheet" type="text/css" href="fontawesome-free-5.1.0-web/css/all.css">
+  <link rel="stylesheet" type="text/css" href="formx.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
+  
+  <script type="text/javascript">
+    function sub(){
+    	if(isNaN(document.ssc.Fname.value)==false){
+    		alert("FirstName shouldn't be in number!!");
+    		return false;
+    	}
+    	if(isNaN(document.ssc.Mname.value)==false){
+    		alert("MiddleName shouldn't be in number!!");
+    		return false;
+    	}
+    	if(isNaN(document.ssc.Lname.value)==false){
+    		alert("LastName shouldn't be in number!!");
+    		return false;
+    	}
+    	if((document.ssc.pincode.value.length)!=6){
+    		alert("Invalid Pincode!!");
+    		return false;
+    	}
+    	if((document.ssc.Mnumber.value.length)!=10){
+    		alert("Invalid number!!");
+    		return false;
+    	}
+    	else{
+    		//alert("Successfully Submitted");
+    		return true;
+    	}
+
+    }
+  </script>
+  <style>
+    body{
+     background:url('ProjectImages/bench-blur-books-459791.jpg');
+	 background-repeat:no-repeat;
+	 background-size:100% 100%;
+   margin: 3px;
+   }
+   *{
+    margin: 0px;
+    padding: 0px;
+  }
+  /* HEADER */
+  .header {
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+  }
+  .header p{
+    padding-top: 20px;
+    padding-left:35%;
+    font-size: 45px;
+    font-family: Viner Hand ITC;
+    color: white;
+    text-shadow:0 0  50px red;
+  }
+  .header p:hover{
+    color: red;
+    text-shadow:none;
+  }
+   /* NAVIGATION */
+    nav{
+      width: 100%;
+      height: 35px;
+      margin-top: 0px;
+      opacity:0.6;
+      background: black;
+      border-bottom: 2px solid red;
+    }
+    nav p{
+      padding-left: 29px;
+      padding-top: 3px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 23px;
+      font-family: Viner Hand ITC;
+      text-shadow:0 0  50px red;
+      float: left;
+      color: white;
+    }
+    nav p:hover{
+      color: red;
+    }
+    nav ul{
+      float: right;
+    }
+    nav ul li a{
+      text-decoration: none;
+      color: white;
+    }
+    nav ul li{
+      list-style: none;
+      width: 120px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      float: left;
+      font-size: 18px;
+      display: block;
+      text-shadow:0 0  50px red;
+      position: relative;
+      transition: all 400ms ease;
+    }
+    nav ul li:hover{
+      background: red;
+      border-radius: 6px;
+    }
+        ul ul li{
+          display: block;
+          font-size: 18px;
+          background-color:black;
+           opacity:0.9;}
+      ul ul{
+      display:none;
+  }
+  ul li:hover > ul{
+      display:block;
+  }
+  ul ul ul{
+   margin-left:120px;
+   top: 0px;
+   position: absolute;
+   }
+   
+   .marquee{
+    padding: 100px;
+    padding-right: 200px;
+    width: 200px;
+    float: right;
+   }
+
+  </style>
+  
+
+  </head>
+
+
+
+
+
+<body>
+  <div class="header">
+    <p id="p">Sheetal's Academy</p>
+  </div>
+  <hr size="2px">
+    <nav>
+      <p>Sheetal's</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Admission</a>
+          <ul>
+                 <li><a href="form.html">X Form</a></li>
+             <li><a href="formXII.html">XII Form</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Courses</a>
+                 <ul>
+            <li><a href="ssc.html">SSC</a></li>
+            <li><a href="#">HSC</a>
+               <ul><li><a href="science.html">Science</a></li>
+                   <li><a href="commerce.html">Commerce</a></li>
+               </ul>
+            </li>
+         </ul>
+        </li>
+        
+        <li><a href="about us.html">About Us</a></li>
+      </ul>
+      <div style="clear: both;"></div>
+    </nav>
+ <div class="marquee" align="right"> 
+   <marquee style="color: red; font-family: Viner Hand ITC; font-size: 20px; " scrollamount="2">Sheetal's Academy</marquee><hr>
+   <marquee style="color: white; font-family: Viner Hand ITC; text-align: center;" direction="up" scrollamount="3">Limited Seats Available<br>Each batch 30 students<br>Weekly Test<br>Prizes on every Test</marquee>
+   <marquee style="color: red; font-family: Viner Hand ITC; font-size: 20px; " scrollamount="2">10% Off on Online Admission.</marquee>
+</div>
+<div class="formDiv">
+  <div class="form">
+  <form name="ssc" onsubmit="return sub()" method="post" action="formsave.php">
+    <h2>Basic Info</h2>
+    <p>First Name :</p>
+    <input type="text" id="Fname" name="Fname" placeholder="First Name"  required>
+    <p>Middle Name :</p>
+    <input type="text" name="Mname" placeholder="Middle Name" required>
+    <p>Last Name :</p>
+    <input type="text" name="Lname" placeholder="Last Name" required>
+    <p>Gender:
+      <input type="radio" name="gender" value="Male" checked="Male">Male
+       <input type="radio" name="gender" value="Female">Female</p>
+    <h2>Address Info</h2>
+    <p>Permanent Add:</p>
+    <input type="textarea" size="30" name="address" placeholder="Permanent Address" required>
+    <p>City:
+       <select name="city">
+               <option value="-1">City</option>
+         <option  value="Ulhasnagar">Ulhasnagar</option>
+               <option value="Kalyan">Kalyan</option>
+         <option value="Dombiwali">Dombiwali</option>
+               <option value="Vithalwadi">Vithalwadi</option>
+       </select>
+    District:
+        <select name="District">
+               <option value="-1" size="15">District</option>
+         <option value=" Thane" size="15">Thane</option>
+    </select>
+        State:
+    <select name="State">
+               <option value="-1" size="15">State</option>
+         <option value="Maharashtra">Maharashtra</option>
+       </select></p>
+    <p>Pincode</p>
+    <input type="tel" name="pincode" size="5" placeholder="123456" maxlength="6" required>
+    <h2>Contact Info</h2>
+    <p>Mobile :</p>
+              <select><option>+91</option></select>
+               <input type="tel" name="Mnumber" placeholder="123456890" maxlength="10" required>
+     <P>Email</P>
+     <input type="Email" name="email" size="26" placeholder="abc@gmail.com" required>
+     <h2>Academic Info</h2>
+     <p>IX Expected Percent:</p>
+     <input type="number" name="IXpercent" size="5" placeholder="%" required>
+     <p>SSC Expected Percent:</p>
+     <input type="number" name="Xpercent" size="5" placeholder="%" required>
+      
+    <input type="submit"><br/> 
+    <input type="reset" name="">          
+  </form> 
+</div>
+</div>
+<footer class="foot">
+        <center>
+            <p>Get in touch:</p>
+        <ul>    
+          <a href="https://www.facebook.com/rokingahirhek.gupta"><li id="facebook"><i class="fab fa-facebook-f"></i></li></a>
+          <a href="https://twitter.com/Abhishek4547656"><li id="twitter"><i class="fab fa-twitter"></i></li></a>
+          <a href="https://www.instagram.com/_a_.g._/"><li id="insta"><i class="fab fa-instagram"></i></li></a>
+          <a href="https://plus.google.com/u/0/110641016489328826955?tab=mX"><li id="google-plus"><i class="fab fa-google-plus-g"></i></li></a>
+          <a href="https://www.google.com/"><li id="email"><i class="far fa-envelope"></i></li></a>
+          <a href="#"><li id="home"><i class="fas fa-home"></i></li></a>
+    </ul>
+    <p>credit: Abhishek Dinesh Gupta</p>
+    </center>
+    </footer>
+</body>
+</html>
